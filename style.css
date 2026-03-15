@@ -1,0 +1,103 @@
+body {
+    font-family: Audiowide;
+    font-size: 25px;
+}
+
+#game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(248 198 30);
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.cell {
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    transition: background-color 0.15s;
+    cursor: pointer;
+}
+
+.cell:active {
+    background-color: rgb(157, 58, 250);
+}
+
+.win-cell {
+    background-color: rgb(157, 58, 250);
+}
+
+button {
+    border-radius: 10px;
+    border: 0px;
+    font-family: Audiowide;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    background-color: rgb(140, 0, 255);
+}
+
+button:active {
+    background-color: rgb(82, 0, 150);
+}
+
+#reset-button {
+    width: 100%;
+    height: 50px;
+}
+
+.confirm-button {
+    width: 100%;
+    height: auto;
+    font-size: small;
+    flex-grow: 1;
+    max-width: 100px;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    margin-top: 10px;
+    gap: 10px;
+    transition: background-color 1s;
+}
+
+#settings-player1, #settings-player2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+input {
+    font-family: Audiowide;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid;
+    flex-grow: 2;
+    color: rgb(0, 0, 0);
+}
+
+#status {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: xx-large;
+}
